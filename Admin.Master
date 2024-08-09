@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Manashreefab.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Manashree Fabrication</title>
+    <meta charset =" utf-8" />
+    <meta name="viewport" content="width=devce-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible"/>
+    <link href="css/Custome.css" rel="stylesheet" />
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+   
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            
+            <!---Navbar--->
+            <div>
+                <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                            <a class =" navbar-brand" ><span><img src ="images/logo.jpg" alt="Manashree Fabrication" height="40"/></span>MANASHREEE FABRICATION WORKS</a>
+                            </div>
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li ><a href="default.aspx">Home</a></li>
+                                <li class ="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage <b class="Caret"></b></a>
+                                <ul class="dropdown-menu">
+                                     <li ><a href="AddSize.aspx">Add Size</a></li>
+                                     <li ><a href="AddCategory.aspx">Add Category</a></li>
+                                     <li ><a href="AddSubCategoey.aspx">Add Sub Category</a></li>
+                                     <li ><a href="AddMaterial.aspx">Add Material</a></li>
+                                    <li ><a href="EditSize.aspx">Edit Size</a></li>
+                                    <li ><a href="EditSubCatgeory.aspx">Edit SubCategory</a></li>
+                                    <li ><a href="EditMaterial.aspx">Edit Material</a></li>
+                                    <li ><a href="EditCategory.aspx">Edit Category</a></li>
+                                </ul>
+                                    </li>
+                               
+                                <li class ="dropdown">
+                                    <a href ="Product.aspx" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href ="AddProduct.aspx">Add Product</a></li>
+                                        <li><a href ="ProductView.aspx">View Product</a></li>
+                                        <li><a href ="DeleteProduct.aspx">Delete Product</a></li>
+                                            </ul>
+                                        
+                                    </li>
+                                <li ><a href="Cutamization.aspx">Custamization</a></li>
+                                <li ><a href="Order.aspx">Order</a></li>
+                                <li ><a href="Contactus.aspx">Contact Us</a></li>
+                                 <li><asp:Button ID="btnAdminlogout" CssClass="btn btn-navbar-default navbar" runat="Server" Text="SingOut" onClick="btnAdminlogout_Click1" /></li>
+                            </ul>
+                        </div>
+                        </div>
+                </div>
+            </div>
+            <!--Navbar--->
+            <div class="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+
+            </asp:ContentPlaceHolder>
+               </div>
+             
+
+        </div>
+    </form>
+    <!----footer start-->
+
+     <footer class="footer-pos">
+        <div class="container">
+            <p class="pull-right"><a href="SingUp.aspx">Back To Top</a></p>
+            <p>&copy;ManashreeEngineering.in &middot;<a href="Homepage.aspx">Home</a>&middot;<a href="product.aspx">Product</a>&middot;<a href="contactus.aspx">Contactus</a></p>
+        </div>
+    </footer>
+
+    <!----footer end--->
+</body>
+</html>
